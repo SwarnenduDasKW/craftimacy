@@ -195,3 +195,15 @@ Do not prematurely implement V3 infrastructure.
 ## License
 
 Proprietary — Craftimacy.
+
+## SiteSettings
+Business Name: Craftimacy
+Tagline: Where Craft Meets Elegance
+Phone: +91 90070 12181
+Email: craftimacy2020@gmail.com
+WhatsApp number: 919007012181
+Address: 71, Vivekananda Rd, opposite Monalisa Art School, Bediapara, North Dumdum, Kolkata, West Bengal 700065, India
+Google Maps URL: https://maps.app.goo.gl/4wTmaxC3TcfQfste7
+Google Reviews URL: https://www.google.com/maps/place/Craftimacy/@22.6462694,88.403013,17z/data=!4m18!1m9!3m8!1s0x39f89f46e51ef085:0x3e0c8863c8856c86!2sCraftimacy!8m2!3d22.6462645!4d88.4055879!9m1!1b1!16s%2Fg%2F11qmxhvtqx!3m7!1s0x39f89f46e51ef085:0x3e0c8863c8856c86!8m2!3d22.6462645!4d88.4055879!9m1!1b1!16s%2Fg%2F11qmxhvtqx?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D
+Instagram URL: https://www.instagram.com/craftimacy/
+Facebook URL: https://www.facebook.com/craftimacy2020
