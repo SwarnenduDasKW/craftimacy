@@ -19,7 +19,7 @@ export function ReviewSection({ settings }: { settings: SiteSettings | null }) {
               ))}
             </div>
             <p className="mt-6 font-display text-5xl md:text-6xl">
-              {settings.googleRating.toFixed(1)}
+                            {settings?.googleRating != null ? settings.googleRating.toFixed(1) : "—"}
               <span className="ml-2 text-xl text-muted">/ 5</span>
             </p>
             <p className="mt-2 text-sm text-muted">
