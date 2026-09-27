@@ -29,7 +29,7 @@ export default async function AboutPage() {
           <div className="mt-6 space-y-5 text-base leading-relaxed text-charcoal/85">
             <p>
               {homepage?.aboutText ??
-                "Craftimacy brings together handcrafted oxidised silver jewelry inspired by Indian artisans and craftsmanship. Each collection is curated to celebrate heritage, texture, and the joy of wearing something deeply personal."}
+                "Craftimacy was born from the dream, ambition, and determination of a young woman from Kolkata, West Bengal. What began as a passion for beautiful handcrafted jewelry grew into a journey of creativity, courage, and perseverance. With her own hands and an unwavering belief in her craft, she designs and creates every piece herself — one piece at a time, with patience, care, and attention to detail. Every creation carries a little part of her journey: the simplicity of handmade artistry, the richness of Indian craftsmanship, and the joy of creating something truly unique. Craftimacy is more than a collection of jewelry; it is the story of one young artisan who turned her passion into a craft, and her dream into something she can share with the world."}
             </p>
             <p>
               From statement earrings to everyday favorites, every piece is selected to feel expressive, meaningful, and beautifully wearable.
