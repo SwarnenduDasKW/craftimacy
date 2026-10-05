@@ -6,7 +6,7 @@ export default function NotFound() {
       <p className="eyebrow">404</p>
       <h1 className="mt-3 font-display text-4xl md:text-6xl">Page not found</h1>
       <p className="mt-4 max-w-md text-sm text-muted">
-        The page you're looking for doesn't exist or has moved. Let's get you
+        The page you&apos;re looking for doesn&apos;t exist or has moved. Let&apos;s get you
         back to the collection.
       </p>
       <div className="mt-8 flex flex-wrap gap-4">

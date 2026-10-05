@@ -1,5 +1,3 @@
-import type { Image as SanityImage } from "sanity";
-
 export interface SanityImageAsset {
   _type: "image";
   asset: {

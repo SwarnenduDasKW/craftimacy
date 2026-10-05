@@ -11,13 +11,18 @@ export function MobileNavigation({
   nav: { href: string; label: string }[];
   whatsappHref: string | null;
 }) {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const [menuState, setMenuState] = useState({ pathname, open: false });
 
-  useEffect(() => setOpen(false), [pathname]);
+  if (menuState.pathname !== pathname) {
+    setMenuState({ pathname, open: false });
+  }
+
+  const open = menuState.open;
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onKey = (e: KeyboardEvent) =>
+      e.key === "Escape" && setMenuState({ pathname, open: false });
     if (open) {
       document.body.style.overflow = "hidden";
       window.addEventListener("keydown", onKey);
@@ -26,7 +31,7 @@ export function MobileNavigation({
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
     };
-  }, [open]);
+  }, [open, pathname]);
 
   return (
     <>
@@ -35,7 +40,7 @@ export function MobileNavigation({
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         aria-controls="mobile-menu"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setMenuState({ pathname, open: !open })}
         className="flex h-10 w-10 items-center justify-center md:hidden"
       >
         <span className="sr-only">Menu</span>
