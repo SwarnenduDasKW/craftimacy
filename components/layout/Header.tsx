@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import craftimacyLogo from "@/static/craftimacy-logo-crop.jpg";
+import craftimacyLogo from "@/static/craftimacy-logo-crop-removebg-preview.png";
 import type { SiteSettings } from "@/types";
 import { MobileNavigation } from "./MobileNavigation";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";

@@ -52,7 +52,7 @@ export function Footer({ settings }: { settings: SiteSettings | null }) {
       <div className="border-t border-ink/10">
         <div className="container-page flex flex-col items-center justify-between gap-3 py-6 text-xs text-muted sm:flex-row">
           <p>© {year} {settings?.businessName ?? "Craftimacy"}. All rights reserved.</p>
-          <p>Site by <a href="https://www.linkedin.com/in/swarnendu-das-41479531/?isSelfProfile=true" className="hover:text-clay">ShawnDKW</a></p>
+          <p>Site by <a href="https://www.linkedin.com/in/swarnendu-das-41479531/?isSelfProfile=true" className="hover:text-clay" target="_blank" rel="noopener noreferrer" >SwarnenduDas</a></p>
         </div>
       </div>
     </footer>
