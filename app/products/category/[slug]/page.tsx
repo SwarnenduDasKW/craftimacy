@@ -7,8 +7,9 @@ import { getCategories, getCategoryBySlug, getProducts } from "@/lib/sanity/quer
 
 export const revalidate = 300;
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const category = await getCategoryBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const category = await getCategoryBySlug(slug);
 
   return {
     title: category ? `${category.name} | Craftimacy` : "Category",
@@ -16,11 +17,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function CategoryPage({ params }: { params: { slug: string } }) {
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const [category, categories, products] = await Promise.all([
-    getCategoryBySlug(params.slug),
+    getCategoryBySlug(slug),
     getCategories(),
-    getProducts({ category: params.slug }),
+    getProducts({ category: slug }),
   ]);
 
   if (!category) {

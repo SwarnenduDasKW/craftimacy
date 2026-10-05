@@ -14,12 +14,15 @@ export const metadata: Metadata = {
 export default async function ContactPage() {
   const settings = await getSiteSettings();
   const wa = buildWhatsAppUrl(settings?.whatsappNumber, generalEnquiryMessage());
+  const mapUrl = settings?.googleMapsUrl
+    ? mapEmbed(settings.googleMapsUrl, settings.address)
+    : null;
 
   return (
     <div className="container-page py-14 md:py-20">
       <header className="max-w-2xl">
         <p className="eyebrow">Contact</p>
-        <h1 className="mt-3 font-display text-4xl md:text-6xl">Let’s talk jewelry</h1>
+        <h1 className="mt-3 font-display text-4xl md:text-6xl">Let’s talk jewellery</h1>
         <p className="mt-4 text-sm text-muted">
           Have a question about a piece, a custom request, or just want to say hello? We’d love to hear from you.
         </p>
@@ -81,11 +84,11 @@ export default async function ContactPage() {
           </div>
         </div>
 
-        {settings?.googleMapsUrl && (
+        {mapUrl && (
           <div className="min-h-[400px] overflow-hidden rounded-sm border border-ink/10">
             <iframe
               title="Craftimacy location"
-              src={mapEmbed(settings.googleMapsUrl)}
+              src={mapUrl}
               width="100%"
               height="100%"
               loading="lazy"
@@ -99,10 +102,29 @@ export default async function ContactPage() {
   );
 }
 
-function mapEmbed(url: string): string {
-  const match = url.match(/[?&]q=([^&]+)/) || url.match(/place\/([^/@]+)/);
-  if (match) {
-    return `https://www.google.com/maps?q=${encodeURIComponent(decodeURIComponent(match[1]))}&output=embed`;
+function mapEmbed(url: string, address?: string): string | null {
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === "www.google.com" && parsed.pathname.startsWith("/maps/embed")) {
+      return url;
+    }
+
+    const place = parsed.pathname.match(/\/place\/([^/@]+)/)?.[1];
+    const location =
+      parsed.searchParams.get("q") ??
+      parsed.searchParams.get("query") ??
+      (place ? decodeURIComponent(place) : null) ??
+      address?.trim();
+
+    if (location) {
+      return `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
+    }
+  } catch {
+    const fallback = address?.trim();
+    if (fallback) {
+      return `https://www.google.com/maps?q=${encodeURIComponent(fallback)}&output=embed`;
+    }
   }
-  return url;
+
+  return null;
 }

@@ -16,7 +16,7 @@ export function AboutSection({ homepage }: { homepage: Homepage | null }) {
           </h2>
           <p className="mt-6 max-w-prose text-base leading-relaxed text-charcoal/85">
             {homepage?.aboutText ??
-              "Craftimacy is a celebration of handcrafted jewelry. We discover designs from artisans and craftsmen across India and bring you a curated collection of oxidised silver pieces — each made with intention, character and care."}
+              "Born from a young artisan’s dream in Kolkata, Craftimacy is a celebration of handmade artistry and Indian craftsmanship. Every piece is thoughtfully created by hand, bringing together unique designs, passion, and a personal touch to create jewelry made to be cherished and worn with joy."}
           </p>
           <Link
             href="/about"

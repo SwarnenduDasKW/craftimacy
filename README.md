@@ -78,14 +78,16 @@ craftimacy/
 
 ### 1. Prerequisites
 
-- Node.js 20+
+- Node.js 22.12+ and npm 12+
 - A Sanity project (free tier is fine)
-- use this every tine you open a terminal
+- The project pins its tested Node version in `.nvmrc`
 ```
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm use 20
+nvm install
+nvm use
 node -v
+npm -v
 npm install
 ```
 
@@ -205,5 +207,12 @@ WhatsApp number: 919007012181
 Address: 71, Vivekananda Rd, opposite Monalisa Art School, Bediapara, North Dumdum, Kolkata, West Bengal 700065, India
 Google Maps URL: https://maps.app.goo.gl/4wTmaxC3TcfQfste7
 Google Reviews URL: https://www.google.com/maps/place/Craftimacy/@22.6462694,88.403013,17z/data=!4m18!1m9!3m8!1s0x39f89f46e51ef085:0x3e0c8863c8856c86!2sCraftimacy!8m2!3d22.6462645!4d88.4055879!9m1!1b1!16s%2Fg%2F11qmxhvtqx!3m7!1s0x39f89f46e51ef085:0x3e0c8863c8856c86!8m2!3d22.6462645!4d88.4055879!9m1!1b1!16s%2Fg%2F11qmxhvtqx?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D
+Google Rating: 5
+Google Review Count 42
+
 Instagram URL: https://www.instagram.com/craftimacy/
 Facebook URL: https://www.facebook.com/craftimacy2020
+Opening Hours: 9:00 AM to 5:00 PM
+Default SEO title: Craftimacy | Handcrafted & Oxidised Silver Jewelry
+
+Default SEO description: Explore Craftimacy’s unique handcrafted jewelry, created by a young artisan from Kolkata with passion and determination. Discover beautiful oxidized silver designs.

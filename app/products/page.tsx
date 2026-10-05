@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ProductGrid } from "@/components/products/ProductGrid";
 import { CategoryFilter } from "@/components/products/CategoryFilter";
 import { SearchBox } from "@/components/products/SearchBox";
@@ -29,7 +30,9 @@ export default async function ProductsPage({
           <h1 className="mt-3 font-display text-4xl md:text-6xl">Craftimacy pieces</h1>
         </div>
         <div className="w-full max-w-md md:ml-auto">
-          <SearchBox />
+          <Suspense fallback={<div className="h-11 w-full border-b border-ink/10" aria-hidden="true" />}>
+            <SearchBox />
+          </Suspense>
         </div>
       </header>
 
