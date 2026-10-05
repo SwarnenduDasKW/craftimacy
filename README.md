@@ -22,6 +22,7 @@ Instagram / Facebook → Craftimacy website → Discover collection
 ```
 
 ## Project Structure
+```
 craftimacy/
 ├── app/
 │   ├── layout.tsx
@@ -72,7 +73,7 @@ craftimacy/
 ├── tsconfig.json
 ├── package.json
 └── README.md
-
+```
 
 ## Local Development
 
@@ -199,6 +200,7 @@ Do not prematurely implement V3 infrastructure.
 Proprietary — Craftimacy.
 
 ## SiteSettings
+```
 Business Name: Craftimacy
 Tagline: Where Craft Meets Elegance
 Phone: +91 90070 12181
@@ -216,3 +218,4 @@ Opening Hours: 9:00 AM to 5:00 PM
 Default SEO title: Craftimacy | Handcrafted & Oxidised Silver Jewelry
 
 Default SEO description: Explore Craftimacy’s unique handcrafted jewelry, created by a young artisan from Kolkata with passion and determination. Discover beautiful oxidized silver designs.
+```

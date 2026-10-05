@@ -53,8 +53,8 @@ export async function getProducts(opts?: { category?: string; search?: string })
     params.category = opts.category;
   }
   if (opts?.search) {
-    filters.push(`title match $search + "*"`);
-    params.search = opts.search;
+    filters.push("title match $search");
+    params.search = `${opts.search.trim()}*`;
   }
 
   return client.fetch(

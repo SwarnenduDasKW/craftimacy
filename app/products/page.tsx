@@ -15,11 +15,12 @@ export const metadata: Metadata = {
 export default async function ProductsPage({
   searchParams,
 }: {
-  searchParams?: { q?: string };
+  searchParams: Promise<{ q?: string }>;
 }) {
+  const { q } = await searchParams;
   const [categories, products] = await Promise.all([
     getCategories(),
-    getProducts({ search: searchParams?.q }),
+    getProducts({ search: q }),
   ]);
 
   return (

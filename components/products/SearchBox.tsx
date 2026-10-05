@@ -24,7 +24,13 @@ export function SearchBox() {
           id="product-search"
           type="search"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => {
+            const nextValue = e.target.value;
+            setValue(nextValue);
+            if (!nextValue.trim() && params.has("q")) {
+              router.replace("/products", { scroll: false });
+            }
+          }}
           placeholder="Search the collection…"
           className="w-full border-b border-ink/25 bg-transparent py-3 pr-10 text-sm placeholder:text-muted focus:border-ink focus:outline-none"
         />
